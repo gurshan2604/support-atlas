@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en" data-theme="light" data-mode="advanced">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Support Atlas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+<a href="#main" class="visually-hidden">Skip to main content</a>
+<header class="header" role="banner">
+  <div class="container header-inner">
+    <a class="brand" href="index.html" aria-label="Support Atlas home">
+      <span class="logo" aria-hidden="true">SA</span>
+      <span>Support Atlas</span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a href="services.html" data-nav="services">All Services</a>
+      <a href="finder.html" data-nav="finder">Service Finder</a>
+      <a href="about.html" data-nav="about">About</a>
+      <a href="help.html" data-nav="help">Help</a>
+      <a href="crisis.html" data-nav="crisis" class="btn btn-secondary">Crisis</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="chat.html" class="btn btn-primary">Start Chat</a>
+      <a href="signin.html" class="btn btn-secondary">Sign In</a>
+      <div class="switches" role="group" aria-label="View settings">
+        <button class="switch" data-toggle="theme" aria-pressed="false" aria-label="Toggle dark mode">🌙 Dark</button>
+        <button class="switch" data-toggle="mode" aria-pressed="false" aria-label="Toggle easy mode">✨ Easy</button>
+      </div>
+    </div>
+  </div>
+</header>
+<main id="main" tabindex="-1">
+
+<section class="section">
+  <div class="container">
+    <h1 class="h1">All Services</h1>
+    <p class="lead">Browse the directory. Use filters to refine. Information only — contact providers directly.</p>
+  </div>
+  <div class="container split" style="margin-top:var(--space-5)">
+    <aside class="filters" aria-label="Filters">
+      <div class="field">
+        <label for="f-loc">Location</label>
+        <input id="f-loc" type="text" placeholder="Suburb or postcode">
+      </div>
+      <div class="field">
+        <label for="f-fee">Fees</label>
+        <select id="f-fee">
+          <option value="">Any</option>
+          <option>Free / Low-cost</option>
+          <option>Bulk‑bill (GP)</option>
+          <option>Paid</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="f-type">Type</label>
+        <select id="f-type">
+          <option value="">Any</option>
+          <option>Psychologist</option>
+          <option>Counsellor</option>
+          <option>GP</option>
+          <option>Peer support</option>
+          <option>Helpline</option>
+        </select>
+      </div>
+      <div class="field">
+        <label><input type="checkbox"> Telehealth</label>
+      </div>
+      <div class="field advanced-only">
+        <label for="f-lang">Languages</label>
+        <input id="f-lang" type="text" placeholder="e.g., Hindi, Mandarin">
+      </div>
+      <div class="field advanced-only">
+        <label for="f-hours">Hours</label>
+        <select id="f-hours">
+          <option>Any</option><option>After hours</option><option>Weekends</option>
+        </select>
+      </div>
+      <button class="btn btn-secondary" aria-label="Clear filters">Clear filters</button>
+    </aside>
+
+    <section aria-label="Results">
+      <div style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin-bottom:16px;">
+        <div class="chips">
+          <button class="chip">Nearby</button>
+          <button class="chip">Low-fee/Free</button>
+          <button class="chip advanced-only">After hours</button>
+          <button class="chip advanced-only">Languages</button>
+        </div>
+        <div>
+          <label for="sort">Sort</label>
+          <select id="sort">
+            <option>Distance</option>
+            <option>A–Z</option>
+            <option>Recently updated</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="card-grid">
+        <article class="card">
+          <h3 class="h3">Greenwood Psychology</h3>
+          <p>Psychologist • Carlton • Telehealth available</p>
+          <p><small>Fees: Private / Medicare rebates • Languages: English, Hindi</small></p>
+          <p><small>Last updated: Aug 2025</small></p>
+          <a class="btn btn-primary" href="provider.html">View details</a>
+        </article>
+        <article class="card">
+          <h3 class="h3">Mindful Counselling</h3>
+          <p>Counsellor • Fitzroy • In-person</p>
+          <p><small>Fees: Low-cost • Languages: English</small></p>
+          <p><small>Last updated: Aug 2025</small></p>
+          <a class="btn btn-primary" href="provider.html">View details</a>
+        </article>
+        <article class="card">
+          <h3 class="h3">Northern GP Co‑Op</h3>
+          <p>GP • Brunswick • After hours</p>
+          <p><small>Fees: Bulk‑bill • Languages: English, Arabic</small></p>
+          <p><small>Last updated: Jul 2025</small></p>
+          <a class="btn btn-primary" href="provider.html">View details</a>
+        </article>
+      </div>
+    </section>
+  </div>
+</section>
+
+</main>
+<footer class="footer" role="contentinfo">
+  <div class="container footer-cols">
+    <div>
+      <div class="brand"><span class="logo" aria-hidden="true">SA</span><span>Support Atlas</span></div>
+      <p style="margin-top:8px;">Support Atlas is an <strong>information directory</strong>. It <strong>does not provide medical advice</strong>, diagnosis, referrals, or endorsements. Service details may change — please verify directly with providers. In an emergency, call <strong>000</strong>.</p>
+    </div>
+    <div>
+      <h3 class="h3">Quick Links</h3>
+      <p><a href="services.html">All Services</a><br>
+         <a href="finder.html">Service Finder</a><br>
+         <a href="about.html">About</a><br>
+         <a href="help.html">Help</a></p>
+    </div>
+    <div>
+      <h3 class="h3">Emergency Contacts</h3>
+      <p>Emergency: <a href="tel:000">000</a><br>
+         Lifeline: <a href="tel:131114">13 11 14</a><br>
+         Kids Helpline: <a href="tel:1800551800">1800 55 1800</a><br>
+         Beyond Blue: <a href="tel:1300224636">1300 22 4636</a></p>
+    </div>
+  </div>
+</footer>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en" data-theme="light" data-mode="advanced">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Admin Login · Support Atlas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+<a href="#main" class="visually-hidden">Skip to main content</a>
+
+<header class="header header--minimal" role="banner">
+  <div class="container header-inner">
+    <a class="brand" href="index.html" aria-label="Support Atlas home">
+      <span class="logo" aria-hidden="true">SA</span>
+      <span>Support Atlas</span>
+    </a>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+  <section class="section page-admin-auth">
+    <div class="container admin-auth-box">
+      <h1 class="h2">Admin sign in</h1>
+      <p class="muted">Admin tools are restricted. Use your admin credentials.</p>
+      <form id="admin-login-form" class="form vstack gap-md" novalidate>
+        <label>
+          <span class="label">Email</span>
+          <input type="email" id="admin-email" placeholder="admin@example.com" required>
+        </label>
+        <label>
+          <span class="label">Password</span>
+          <input type="password" id="admin-pass" placeholder="••••••••" required>
+        </label>
+        <button class="btn btn-primary" type="submit">Sign in</button>
+        <p class="muted small">Demo: any email/password works. This does not contact a server.</p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="footer footer--minimal" role="contentinfo">
+  <div class="container footer-cols">
+    <p>Support Atlas admin tools.</p>
+  </div>
+</footer>
+
+<script src="assets/js/app.js"></script>
+<script>
+  // Demo login: set admin flag and go to dashboard
+  document.getElementById('admin-login-form').addEventListener('submit', function(e){
+    e.preventDefault();
+    localStorage.setItem('sa_admin', '1');
+    window.location.href = 'admin.html';
+  });
+</script>
+</body>
+</html>

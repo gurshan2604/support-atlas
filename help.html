@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en" data-theme="light" data-mode="advanced">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Support Atlas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+<a href="#main" class="visually-hidden">Skip to main content</a>
+<header class="header" role="banner">
+  <div class="container header-inner">
+    <a class="brand" href="index.html" aria-label="Support Atlas home">
+      <span class="logo" aria-hidden="true">SA</span>
+      <span>Support Atlas</span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a href="services.html" data-nav="services">All Services</a>
+      <a href="finder.html" data-nav="finder">Service Finder</a>
+      <a href="about.html" data-nav="about">About</a>
+      <a href="help.html" data-nav="help">Help</a>
+      <a href="crisis.html" data-nav="crisis" class="btn btn-secondary">Crisis</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="chat.html" class="btn btn-primary">Start Chat</a>
+      <a href="signin.html" class="btn btn-secondary">Sign In</a>
+      <div class="switches" role="group" aria-label="View settings">
+        <button class="switch" data-toggle="theme" aria-pressed="false" aria-label="Toggle dark mode">🌙 Dark</button>
+        <button class="switch" data-toggle="mode" aria-pressed="false" aria-label="Toggle easy mode">✨ Easy</button>
+      </div>
+    </div>
+  </div>
+</header>
+<main id="main" tabindex="-1">
+
+  <!-- HELP HERO -->
+  <section class="section help-hero">
+    <div class="container">
+      <div class="help-hero-inner">
+        <div class="help-hero-text">
+          <h1 class="display reveal">Help Centre</h1>
+          <p class="lead reveal delay-1">Quick answers, clear guidance, and ways to get support using <strong>Support Atlas</strong>. We’re an <strong>information directory</strong> — not medical advice.</p>
+          <div class="help-search help-search--wide reveal delay-2" role="search">
+            <input id="help-search" type="text" placeholder="Type your question here…" aria-label="Search help topics">
+            <button class="btn btn-primary" id="help-search-btn">Search</button>
+          </div>
+        </div>
+        <div class="help-hero-viz reveal delay-3" aria-hidden="true">
+          <div class="orb"></div>
+          <div class="ring"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUICK CARDS -->
+  <section class="section alt">
+    <div class="container card-grid help-cards">
+      <article class="card tilt-card">
+        <h3 class="h3">What is Support Atlas?</h3>
+        <p>We list information about mental‑health services so you can contact providers directly. We don’t diagnose or endorse.</p>
+        <a href="#faq-info" class="btn btn-secondary">Learn more</a>
+      </article>
+      <article class="card tilt-card">
+        <h3 class="h3">Anonymous Chat</h3>
+        <p>Use chat without an account. Messages are not stored. Sign in if you want to save history.</p>
+        <a href="chat.html" class="btn btn-secondary">Open chat</a>
+      </article>
+      <article class="card tilt-card">
+        <h3 class="h3">List a Service</h3>
+        <p>Suggest a new service or update an existing one. Anonymous suggestions go to moderation.</p>
+        <a href="list-service.html" class="btn btn-secondary">List a service</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- FAQ (ACCORDION) -->
+  <section class="section" id="faq">
+    <div class="container">
+      <h2 class="h2 reveal">Frequently asked</h2>
+      <div class="accordion" id="faq-list">
+        <details class="acc-item reveal delay-1" id="faq-info">
+          <summary class="acc-summary"><span>Is this medical advice or a referral service?</span></summary>
+          <div class="acc-panel"><p>No. Support Atlas is an <strong>information directory</strong>. We don’t provide medical advice, diagnosis, referrals, or endorsements. Verify details directly with providers.</p></div>
+        </details>
+        <details class="acc-item reveal delay-2">
+          <summary class="acc-summary"><span>Can I use chat without an account?</span></summary>
+          <div class="acc-panel"><p>Yes. Anonymous chat is available; messages aren’t stored. If you sign in, you can save chat history and bookmarks.</p></div>
+        </details>
+        <details class="acc-item reveal delay-3">
+          <summary class="acc-summary"><span>How do I find services near me?</span></summary>
+          <div class="acc-panel"><p>Use <a href="services.html">All Services</a> to browse, or the <a href="finder.html">Service Finder</a> for a map view with filters like telehealth, fees, languages, and hours.</p></div>
+        </details>
+        <details class="acc-item reveal delay-1">
+          <summary class="acc-summary"><span>How do I list or update a service?</span></summary>
+          <div class="acc-panel"><p>Go to <a href="list-service.html">List a Service</a>. Anonymous users can suggest changes; trusted users can publish; super users review and approve.</p></div>
+        </details>
+        <details class="acc-item reveal delay-2">
+          <summary class="acc-summary"><span>What about privacy?</span></summary>
+          <div class="acc-panel"><p>We minimise data collection, provide anonymous chat, and respect consent. Read our <a href="privacy.html">Privacy</a> for details.</p></div>
+        </details>
+        <details class="acc-item reveal delay-3">
+          <summary class="acc-summary"><span>Do you support multiple languages?</span></summary>
+          <div class="acc-panel"><p>English is default; multi‑language support is planned. The chat shows a <strong>Translate</strong> toggle (demo).</p></div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT PANEL -->
+  <section class="section alt">
+    <div class="container contact-panel reveal">
+      <div>
+        <h2 class="h2">Still need help?</h2>
+        <p>Ask in chat or contact us. For emergencies, call <strong>000</strong>.</p>
+      </div>
+      <div class="cta-buttons">
+        <a class="btn btn-primary" href="chat.html">Ask in chat</a>
+        <a class="btn btn-secondary" href="mailto:hello@example.com">Email support</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CRISIS NOTE -->
+  <section class="section">
+    <div class="container">
+      <div class="card note">
+        <p>If you’re in immediate danger, call <strong>000</strong>. 24/7 support: Lifeline <strong>13 11 14</strong>, Kids Helpline <strong>1800 55 1800</strong>, Beyond Blue <strong>1300 22 4636</strong>.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+<footer class="footer" role="contentinfo">
+  <div class="container footer-cols">
+    <div>
+      <div class="brand"><span class="logo" aria-hidden="true">SA</span><span>Support Atlas</span></div>
+      <p style="margin-top:8px;">Support Atlas is an <strong>information directory</strong>. It <strong>does not provide medical advice</strong>, diagnosis, referrals, or endorsements. Service details may change — please verify directly with providers. In an emergency, call <strong>000</strong>.</p>
+    </div>
+    <div>
+      <h3 class="h3">Quick Links</h3>
+      <p><a href="services.html">All Services</a><br>
+         <a href="finder.html">Service Finder</a><br>
+         <a href="about.html">About</a><br>
+         <a href="help.html">Help</a></p>
+    </div>
+    <div>
+      <h3 class="h3">Emergency Contacts</h3>
+      <p>Emergency: <a href="tel:000">000</a><br>
+         Lifeline: <a href="tel:131114">13 11 14</a><br>
+         Kids Helpline: <a href="tel:1800551800">1800 55 1800</a><br>
+         Beyond Blue: <a href="tel:1300224636">1300 22 4636</a></p>
+    </div>
+  </div>
+</footer>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

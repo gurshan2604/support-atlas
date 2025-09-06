@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en" data-theme="light" data-mode="advanced">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Admin Dashboard · Support Atlas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+<a href="#main" class="visually-hidden">Skip to main content</a>
+
+<header class="header header--minimal" role="banner">
+  <div class="container header-inner">
+    <a class="brand" href="index.html" aria-label="Support Atlas home">
+      <span class="logo" aria-hidden="true">SA</span>
+      <span>Support Atlas</span>
+    </a>
+    <div class="nav-cta">
+      <button id="admin-signout" class="btn btn-secondary">Sign out</button>
+    </div>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+  <section class="section admin-shell">
+    <div class="container admin-grid">
+      <!-- Left nav -->
+      <nav class="admin-nav" aria-label="Admin">
+        <button class="admin-tab is-active" data-tab="queue">Moderation Queue</button>
+        <button class="admin-tab" data-tab="listings">Listings</button>
+        <button class="admin-tab" data-tab="users">Users & Roles</button>
+        <button class="admin-tab" data-tab="settings">Settings</button>
+        <button class="admin-tab" data-tab="audit">Audit Log</button>
+      </nav>
+
+      <!-- Main panel -->
+      <div class="admin-main">
+        <!-- Queue -->
+        <section class="admin-panel" data-panel="queue">
+          <h1 class="h2">Moderation Queue</h1>
+          <p class="muted">Review new/edited services. Approve to publish, or reject with a note.</p>
+          <div id="queue-table" class="table table-list"></div>
+          <aside id="queue-drawer" class="drawer" aria-live="polite" hidden></aside>
+        </section>
+
+        <!-- Listings -->
+        <section class="admin-panel" data-panel="listings" hidden>
+          <h1 class="h2">Listings</h1>
+          <div class="toolbar">
+            <input id="listings-search" type="text" placeholder="Search listings…">
+            <button id="listings-add" class="btn btn-primary">Add listing</button>
+          </div>
+          <div id="listings-table" class="table table-list"></div>
+        </section>
+
+        <!-- Users & Roles -->
+        <section class="admin-panel" data-panel="users" hidden>
+          <h1 class="h2">Users & Roles</h1>
+          <div id="users-table" class="table table-list"></div>
+        </section>
+
+        <!-- Settings -->
+        <section class="admin-panel" data-panel="settings" hidden>
+          <h1 class="h2">Settings</h1>
+          <form class="vstack gap-md" id="admin-settings-form">
+            <label class="switch-row"><input type="checkbox" id="set-require-approval" checked> <span>Require approval for new/edited services</span></label>
+            <label class="switch-row"><input type="checkbox" id="set-email-notify"> <span>Email notify on new submissions (demo)</span></label>
+            <label class="switch-row"><input type="checkbox" id="set-allow-anon-suggest" checked> <span>Allow anonymous suggestions (go to queue)</span></label>
+            <button class="btn btn-primary" type="submit">Save settings</button>
+          </form>
+        </section>
+
+        <!-- Audit Log -->
+        <section class="admin-panel" data-panel="audit" hidden>
+          <h1 class="h2">Audit Log</h1>
+          <div id="audit-list" class="vstack gap-sm"></div>
+        </section>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer footer--minimal" role="contentinfo">
+  <div class="container footer-cols">
+    <p>Admin tools are for authorised staff. Actions in this demo do not persist beyond local storage.</p>
+  </div>
+</footer>
+
+<script src="assets/js/app.js"></script>
+<script>
+  // Protect route
+  if (!localStorage.getItem('sa_admin')) { window.location.replace('admin-login.html'); }
+
+  // Sign out
+  document.getElementById('admin-signout').addEventListener('click', ()=>{
+    localStorage.removeItem('sa_admin');
+    window.location.href = 'admin-login.html';
+  });
+</script>
+</body>
+</html>
